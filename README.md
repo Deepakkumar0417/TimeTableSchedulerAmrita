@@ -1,2 +1,1 @@
-# TimeTableSchedulerAmrita
-Automated Cedit based Time table shceduler for universities which has Admin Login, where Admin creates semesters, and courses. Teacher will enroll in  those courses based on thier enrollment with out any conflicts the time table is scheduled , It gives both teacher perspective and general time tables
+Automated credit-based timetable scheduler for universities with Admin login to create semesters & courses. Teachers enroll in courses, and conflict-free timetables are generated. Provides both teacher-wise and general timetables for efficient scheduling.
