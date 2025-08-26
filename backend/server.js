@@ -4,12 +4,12 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
-import teacherRoute from './routes/teacher.routes.js';
+import teacherRoute from './Routes/teacher.routes.js';
 import db from './DB/database.js';
-import adminRoute from './routes/admin.routes.js';
+import adminRoute from './Routes/admin.routes.js';
 import timetableRoutes from './Routes/timetable.routes.js';
-import createViewRoutes from './routes/create_view.routes.js';
-import studentRoutes from './routes/student.routes.js';
+import createViewRoutes from './Routes/create_view.routes.js';
+import studentRoutes from './Routes/student.routes.js';
 
 
 
@@ -56,3 +56,4 @@ const start = async () => {
 };
 
 start();
+
