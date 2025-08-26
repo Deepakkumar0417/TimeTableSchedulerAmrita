@@ -1,0 +1,76 @@
+/* Centered full-screen shell */
+.admin-shell {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background: #eef2f7;
+  padding: 24px;
+}
+
+/* Card */
+.admin-card {
+  width: min(96vw, 900px);
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+
+.admin-title {
+  margin: 0 0 6px;
+  font: 800 clamp(1.6rem, 2.6vw, 2.2rem)/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #111827;
+  text-align: center;
+}
+
+.admin-subtitle {
+  margin: 0 0 16px;
+  text-align: center;
+  color: #4b5563;
+}
+
+/* Section headers */
+.admin-section-title {
+  margin: 18px 0 10px;
+  color: #1f2937;
+  font-weight: 800;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+}
+
+/* Button grid */
+.admin-btn-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 720px) {
+  .admin-btn-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Buttons */
+.admin-btn {
+  width: 100%;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 12px;
+  background: #111827;
+  color: #e5e7eb;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+  transition: transform .05s ease, box-shadow .2s ease, background .2s ease;
+}
+.admin-btn:hover { transform: translateY(-1px); box-shadow: 0 12px 22px rgba(0,0,0,.10); background:#0f172a; }
+
+.admin-btn.primary { background: #3b82f6; color: #fff; }
+.admin-btn.primary:hover { background: #2563eb; }
+
+.admin-btn.ghost {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+.admin-btn.ghost:hover {
+  background: #e5e7eb;
+}

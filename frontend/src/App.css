@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900;
+  }
+
+  
+}
+
+/* Custom component styles */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-all duration-300 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-500 text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white shadow-md rounded-lg p-6;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .glass-morphism {
+    @apply bg-white bg-opacity-20 backdrop-blur-lg rounded-lg;
+  }
+
+  .center-flex {
+    @apply flex items-center justify-center;
+  }
+
+  .full-screen {
+    @apply min-h-screen flex items-center justify-center;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text;
+  }
+}
+
+/* Responsive adjustments */
+@screen sm {
+  /* Small screen specific styles */
+}
+
+@screen md {
+  /* Medium screen specific styles */
+}
+
+@screen lg {
+  /* Large screen specific styles */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}

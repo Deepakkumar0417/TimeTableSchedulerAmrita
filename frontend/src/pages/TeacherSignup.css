@@ -1,0 +1,54 @@
+/* Scope to this route */
+body.teacher-signup { overflow: hidden; }
+
+/* Full-screen centered overlay */
+.tsp-viewport {
+  position: fixed; inset: 0; z-index: 9999;
+  display: grid; place-items: center;
+  padding: 16px; background: #f3f4f6;
+}
+
+/* Card */
+.tsp-card {
+  width: min(96vw, 760px);
+  max-height: calc(100svh - 32px);
+  overflow: auto;
+  background:#fff; border-radius:18px; box-shadow:0 20px 60px rgba(0,0,0,.12);
+  padding: 28px 24px;
+}
+
+.tsp-title {
+  margin: 0 0 16px;
+  font: 800 clamp(1.8rem, 2.3vw, 2.4rem)/1.2 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  color:#111827; text-align:center;
+}
+
+.tsp-msg { margin:8px 0 12px; padding:10px 12px; border-radius:10px; font-weight:600; }
+.tsp-msg.error { background:#fee2e2; color:#991b1b; }
+.tsp-msg.success { background:#dcfce7; color:#065f46; }
+
+.tsp-form { display:grid; gap:16px; }
+
+/* Responsive two-col grid (stacks on small) */
+.grid-two { display:grid; gap:16px; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .grid-two { grid-template-columns: 1fr 1fr; } }
+
+.tsp-field { display:grid; gap:6px; }
+.tsp-label { font-weight:600; color:#374151; }
+
+.tsp-input, .tsp-select {
+  width:100%; padding:12px 14px; border-radius:10px; border:2px solid #e5e7eb;
+  background:#111827; color:#e5e7eb;
+}
+.tsp-select { background:#374151; }
+.tsp-input::placeholder { color:#9ca3af; }
+
+.tsp-btn.primary {
+  width:100%; padding:14px 18px; border:0; border-radius:10px; font-weight:700;
+  background:#3b82f6; color:#fff; cursor:pointer;
+}
+.tsp-btn.primary:hover { background:#2563eb; }
+
+.tsp-bottom { text-align:center; margin-top:4px; }
+.tsp-bottom a { color:#3b82f6; text-decoration:none; }
+.tsp-bottom a:hover { text-decoration:underline; }

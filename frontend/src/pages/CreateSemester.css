@@ -1,0 +1,119 @@
+/* Scope to this route only */
+body.admin-create { overflow: hidden; }
+
+/* Full-screen overlay like the other pages */
+.create-viewport {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;      /* center both axes */
+  padding: 16px;
+  background: #edf2f7;      /* light neutral */
+}
+
+/* Card with internal safe scroll (page itself never scrolls) */
+.create-card {
+  width: min(96vw, 1000px);              /* laptop-friendly width */
+  max-height: calc(100svh - 32px);       /* avoid viewport overflow */
+  overflow: auto;                        /* if content is long, scroll inside card */
+  padding: 32px 28px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.12);
+}
+
+.page-title {
+  margin: 0 0 16px;
+  color: #111827;
+  font: 700 clamp(1.8rem, 2.4vw, 2.4rem)/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.msg { margin: 10px 0 16px; padding: 10px 12px; border-radius: 10px; font-weight: 600; }
+.msg.error   { background: #fee2e2; color: #991b1b; }
+.msg.success { background: #dcfce7; color: #065f46; }
+
+.create-form { display: grid; gap: 22px; }
+
+/* Shared controls */
+.form-group { display: grid; gap: 8px; }
+.form-label  { font-weight: 600; color: #374151; }
+.form-input, .form-select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  background: #111827;   /* dark input look you used */
+  color: #e5e7eb;
+}
+.form-input::placeholder { color: #9ca3af; }
+.form-select { background: #374151; color: #e5e7eb; }
+
+/* Responsive grids
+   - On laptops/desktops: side-by-side
+   - On small screens: stacked */
+.grid { display: grid; gap: 16px; }
+
+/* Top trio: Semester, Year, Stream */
+.grid-top {
+  grid-template-columns: 1fr;      /* default stack */
+}
+@media (min-width: 900px) {
+  .grid-top {
+    grid-template-columns: repeat(3, 1fr); /* side-by-side on laptops */
+  }
+}
+
+/* Course entry row */
+.grid-course {
+  grid-template-columns: 1fr;        /* default stack */
+}
+@media (min-width: 900px) {
+  .grid-course {
+    grid-template-columns: 1fr 1.5fr 1fr 1fr auto; /* ID | Name | Theory | Lab | Add */
+    align-items: end;
+  }
+}
+
+.section-title {
+  margin: 8px 0;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn.add {
+  background: #3b82f6; color: #fff;
+}
+.btn.add:hover {
+  background: #2563eb;
+}
+.btn.submit {
+  background: #22c55e; color:#fff;
+}
+.btn.submit:hover {
+  background: #16a34a;
+}
+
+/* Added courses list */
+.added-courses {
+  max-height: 160px;
+  overflow: auto;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+.added-courses ul { margin: 0; padding-left: 18px; }
+.added-courses li { margin: 6px 0; color:#374151; }
+
+@media (max-width: 560px) {
+  .create-card { width: 96vw; padding: 24px 18px; }
+}

@@ -1,0 +1,196 @@
+/* ========== Page & Card ========== */
+.student-tt-wrap {
+  min-height: 100svh;
+  background: #f6f7fb;
+  padding: 16px;
+}
+
+.student-tt-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ========== Form ========== */
+.student-tt-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.form-field { display: block; }
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #111827;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.form-select:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.2);
+}
+
+/* ========== Buttons ========== */
+.btn {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter .15s ease, transform .02s ease;
+  user-select: none;
+}
+.btn:active { transform: translateY(1px); }
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Primary action */
+.btn.primary {
+  background: #0ea5e9;   /* sky-500 */
+  color: #fff;
+}
+.btn.primary:hover:not(:disabled) {
+  filter: brightness(0.95);
+}
+
+/* Outline (secondary) */
+.btn.outline {
+  background: #fff;
+  color: #0f172a;         /* slate-900 */
+  border: 1px solid #e5e7eb;
+}
+.btn.outline:hover:not(:disabled) {
+  filter: brightness(0.98);
+}
+
+/* ========== Download Bar ========== */
+.download-bar {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.download-label {
+  font-size: 13px;
+  color: #334155;         /* slate-700 */
+  margin-right: 4px;
+}
+
+/* ========== Alerts ========== */
+.alert {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.alert.info {
+  background: #eef6ff;
+  color: #1e40af;
+}
+.alert.error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ========== Timetable Table ========== */
+.tt-scroll { margin-top: 16px; overflow-x: auto; }
+
+.tt-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.tt-th {
+  text-align: left;
+  padding: 10px 12px;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.tt-day {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  font-weight: 700;
+  background: #fafafa;
+  white-space: nowrap;
+}
+
+.tt-cell {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+  background: #fff;
+}
+
+/* Empty / free period */
+.tt-cell.free {
+  color: #94a3b8; /* slate-400 */
+}
+
+/* Break */
+.tt-cell.break {
+  background: #fff7ed; /* orange-50 */
+  color: #9a3412;      /* orange-800 */
+  font-weight: 700;
+}
+
+/* Class cell */
+.tt-cell.class {
+  background: #f8fafc; /* slate-50 */
+}
+
+/* Class content */
+.tt-code {
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.tt-name {
+  margin: 0;
+}
+.tt-meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* ========== Responsive tweaks ========== */
+@media (max-width: 640px) {
+  .title { font-size: 18px; }
+  .form-select { padding: 8px 10px; }
+  .btn { padding: 9px 12px; }
+  .tt-table { min-width: 640px; }
+}
